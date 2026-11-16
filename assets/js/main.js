@@ -12,6 +12,25 @@
   var toastEl = document.getElementById('toast');
   var toastTimer;
 
+  var isEnglish = (root.lang || 'pt').toLowerCase().indexOf('en') === 0;
+  var STRINGS = isEnglish
+    ? {
+        switchToLight: 'Switch to light theme',
+        switchToDark: 'Switch to dark theme',
+        openMenu: 'Open menu',
+        closeMenu: 'Close menu',
+        copied: 'Email copied! 🎉',
+        copyManual: 'Copy manually: '
+      }
+    : {
+        switchToLight: 'Ativar tema claro',
+        switchToDark: 'Ativar tema escuro',
+        openMenu: 'Abrir menu',
+        closeMenu: 'Fechar menu',
+        copied: 'E-mail copiado! 🎉',
+        copyManual: 'Copie manualmente: '
+      };
+
   /* ---------- Tema claro/escuro ---------- */
   var themeToggle = document.getElementById('theme-toggle');
 
@@ -27,8 +46,8 @@
     }
 
     if (themeToggle) {
-      themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Ativar tema claro' : 'Ativar tema escuro');
-      themeToggle.setAttribute('title', theme === 'dark' ? 'Ativar tema claro' : 'Ativar tema escuro');
+      themeToggle.setAttribute('aria-label', theme === 'dark' ? STRINGS.switchToLight : STRINGS.switchToDark);
+      themeToggle.setAttribute('title', theme === 'dark' ? STRINGS.switchToLight : STRINGS.switchToDark);
     }
   }
 
@@ -49,7 +68,7 @@
     nav.classList.remove('is-open');
     menuToggle.classList.remove('is-open');
     menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.setAttribute('aria-label', 'Abrir menu');
+    menuToggle.setAttribute('aria-label', STRINGS.openMenu);
   }
 
   if (nav && menuToggle) {
@@ -57,7 +76,7 @@
       var isOpen = nav.classList.toggle('is-open');
       menuToggle.classList.toggle('is-open', isOpen);
       menuToggle.setAttribute('aria-expanded', String(isOpen));
-      menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+      menuToggle.setAttribute('aria-label', isOpen ? STRINGS.closeMenu : STRINGS.openMenu);
     });
 
     nav.querySelectorAll('a').forEach(function (link) {
@@ -280,14 +299,14 @@
 
     if (navigator.clipboard && window.isSecureContext) {
       navigator.clipboard.writeText(email).then(function () {
-        showToast('E-mail copiado! 🎉');
+        showToast(STRINGS.copied);
       }).catch(function () {
-        showToast(fallbackCopy(email) ? 'E-mail copiado!' : 'Copie manualmente: ' + email);
+        showToast(fallbackCopy(email) ? STRINGS.copied : STRINGS.copyManual + email);
       });
       return;
     }
 
-    showToast(fallbackCopy(email) ? 'E-mail copiado!' : 'Copie manualmente: ' + email);
+    showToast(fallbackCopy(email) ? STRINGS.copied : STRINGS.copyManual + email);
   }
 
   document.querySelectorAll('[data-copy-email]').forEach(function (button) {

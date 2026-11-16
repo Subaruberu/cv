@@ -1,6 +1,6 @@
 # Willian Dias — Portfólio & CV Online
 
-> Currículo e portfólio pessoal construídos do zero com HTML, CSS e JavaScript — uma evolução do template disponibilizado pela [DIO](https://github.com/digitalinnovationone/cv).
+> Currículo e portfólio pessoal construídos do zero com HTML, CSS e JavaScript — uma evolução do template disponibilizado pela [DIO](https://github.com/digitalinnovationone/cv), com versões em **português** e **inglês**.
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
@@ -30,6 +30,7 @@ O resultado é um site que funciona como **currículo, portfólio e cartão de v
 | Tema único | Tema claro/escuro com preferência salva no navegador |
 | Sem interatividade | Navegação ativa, animações de entrada, contadores e copiar e-mail |
 | Apenas desktop | Layout responsivo (desktop, tablet e celular) |
+| Apenas em português | Versão em inglês com seletor **PT \| EN** no topo |
 | Acessibilidade limitada | Skip link, foco visível, ARIA e respeito a `prefers-reduced-motion` |
 | Sem versão para impressão | Estilos `@media print` otimizados para gerar PDF |
 | Conteúdo genérico | Conteúdo real: projetos, stack e formação |
@@ -38,6 +39,7 @@ O resultado é um site que funciona como **currículo, portfólio e cartão de v
 
 ## Funcionalidades
 
+- **Bilíngue (PT/EN)** — seletor no topo alterna entre a versão em português e a tradução completa em inglês, com `hreflang` e metadados próprios para cada idioma.
 - **Tema claro/escuro** com detecção da preferência do sistema e persistência em `localStorage`.
 - **Layout responsivo** em grid, com sidebar fixa no desktop e empilhada no mobile.
 - **Navegação com scrollspy** — o link da seção visível é destacado automaticamente.
@@ -66,7 +68,9 @@ O resultado é um site que funciona como **currículo, portfólio e cartão de v
 
 ```text
 cv/
-├── index.html              # Página única com todas as seções
+├── index.html              # Versão em português (página inicial)
+├── en/
+│   └── index.html          # Versão em inglês (usa os mesmos assets)
 ├── assets/
 │   ├── css/
 │   │   └── style.css       # Design system, layout, responsivo e impressão
@@ -97,7 +101,7 @@ npx serve .
 # Instale a extensão "Live Server" e clique em "Go Live"
 ```
 
-Depois acesse `http://localhost:8000`.
+Depois acesse `http://localhost:8000`. A versão em inglês fica em `http://localhost:8000/en/`.
 
 > Abrir o `index.html` diretamente com duplo clique também funciona, mas o botão de copiar e-mail pode exigir um servidor local por causa das permissões da Clipboard API.
 
@@ -126,15 +130,22 @@ Depois acesse `http://localhost:8000`.
 
 ## Personalização
 
-O conteúdo está centralizado no `index.html`. Para atualizar o currículo:
+O conteúdo está centralizado em `index.html` (português) e `en/index.html` (inglês). Para atualizar o currículo:
 
 - [ ] Troque a foto em `assets/img/avatar.png` (quadrada, pelo menos 400 × 400 px).
-- [ ] Atualize nome, cargo, localização e e-mail no topo e no rodapé.
+- [ ] Atualize nome, cargo, localização e e-mail no topo e no rodapé **nos dois idiomas**.
 - [ ] Ajuste as barras de skill em `.skill__bar[data-level]` e no texto de porcentagem.
 - [ ] Adicione experiências profissionais na seção **Formação** ou crie uma seção **Experiência** seguindo o componente `.timeline`.
 - [ ] Inclua o link do LinkedIn na sidebar (há um ícone pronto: `#i-linkedin`).
 - [ ] Atualize os projetos e links conforme seu portfólio evoluir.
 - [ ] Rode `git commit` + `git push` — o GitHub Pages atualiza automaticamente.
+
+### Versão em inglês
+
+- Os textos da interface dinâmica (tema, menu e toast de copiar e-mail) são traduzidos automaticamente em `assets/js/main.js` a partir de `document.documentElement.lang`.
+- A página em inglês fica em `en/index.html`, usa `lang="en"` e referencia os assets com `../assets/`.
+- Os metadados (`title`, description, Open Graph, JSON-LD e `canonical`) e os links `hreflang` são específicos de cada idioma.
+- Ao alterar qualquer texto, atualize também a página correspondente em inglês para manter as duas versões sincronizadas.
 
 ### Cores
 
@@ -150,6 +161,7 @@ As cores ficam no topo de `assets/css/style.css`, nos blocos `:root` (tema escur
 - Ícones decorativos com `aria-hidden` e botões com rótulos acessíveis.
 - Sem frameworks, sem build e sem JS de terceiros: apenas um CSS e um JS.
 - Imagem de perfil com `width`, `height` e `loading="eager"` para evitar layout shift.
+- Lighthouse (desktop) nas versões PT e EN: **100** em acessibilidade, boas práticas e SEO, sem erros no console.
 
 ---
 
