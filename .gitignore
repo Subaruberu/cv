@@ -1,0 +1,13 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Logs e dependências (o projeto não usa, mas evita sujeira)
+node_modules/
+npm-debug.log*

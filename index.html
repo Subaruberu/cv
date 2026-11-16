@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Willian Dias — Dados, IA & Automação</title>
+  <meta name="description" content="Portfólio e currículo de Willian Dias: Ciência de Dados, Inteligência Artificial, Python, SQL, Power BI e Microsoft Azure. Projetos com agentes de IA, análise de dados e automação.">
+  <meta name="author" content="Willian Dias">
+  <meta name="theme-color" content="#070b12">
+
+  <!-- Open Graph / SEO -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Willian Dias — Dados, IA & Automação">
+  <meta property="og:description" content="Transformando dados em decisões com Python, SQL e Inteligência Artificial.">
+  <meta property="og:image" content="https://subaruberu.github.io/cv/assets/img/avatar.png">
+  <meta property="og:image:alt" content="Foto de perfil de Willian Dias">
+  <meta property="og:url" content="https://subaruberu.github.io/cv/">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://subaruberu.github.io/cv/">
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Evita "flash" de tema errado antes do CSS carregar -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('wd-theme');
+        var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        document.documentElement.dataset.theme = saved || (prefersLight ? 'light' : 'dark');
+      } catch (e) { /* localStorage indisponível */ }
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+
+  <!-- Dados estruturados para mecanismos de busca -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Willian Dias",
+      "jobTitle": "Analista de Dados e entusiasta de IA",
+      "email": "mailto:willian.fer.dias01@gmail.com",
+      "address": { "@type": "PostalAddress", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR" },
+      "url": "https://github.com/Subaruberu",
+      "sameAs": ["https://github.com/Subaruberu"],
+      "knowsAbout": ["Ciência de Dados", "Inteligência Artificial", "Python", "SQL", "Power BI", "Microsoft Azure", "Machine Learning"]
+    }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <!-- Ícones SVG reutilizáveis -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><rect width="4" height="12" x="2" y="9" rx="1"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 8.4 5.6a1.8 1.8 0 0 0 2 0L22 7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect width="13" height="13" x="9" y="9" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z"/><path d="M5 3v4M3 5h4M19 17v4M17 19h4"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M21.42 10.92a1 1 0 0 0-.02-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z"/><path d="M22 10v6M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7M12 19V5"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6M12 19h8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l3-9 4 18 3-9h4"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol>
+  </svg>
+
+  <!-- Ornamentos de fundo -->
+  <div class="backdrop" aria-hidden="true">
+    <span class="orb orb--teal"></span>
+    <span class="orb orb--blue"></span>
+    <span class="orb orb--violet"></span>
+    <span class="grid-lines"></span>
+  </div>
+
+  <header class="topbar" id="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="#top">
+        <span class="brand__mark">WD</span>
+        <span class="brand__name">Willian Dias</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <a class="nav__link" href="#sobre">Sobre</a>
+        <a class="nav__link" href="#competencias">Competências</a>
+        <a class="nav__link" href="#projetos">Projetos</a>
+        <a class="nav__link" href="#formacao">Formação</a>
+        <a class="nav__link" href="#contato">Contato</a>
+      </nav>
+
+      <div class="topbar__actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Alternar tema claro e escuro" title="Alternar tema">
+          <svg class="icon icon--sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="icon icon--moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
+        <button class="btn btn--ghost btn--sm print-btn" type="button" data-print>
+          <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+          <span>Baixar PDF</span>
+        </button>
+        <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <svg class="icon icon--menu" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="icon icon--close" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout" id="main">
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar" aria-label="Informações pessoais">
+      <section class="card profile reveal">
+        <div class="profile__avatar">
+          <img src="assets/img/avatar.png" alt="Foto de perfil de Willian Dias" width="128" height="128" loading="eager">
+          <span class="profile__status" title="Aberto a oportunidades"></span>
+        </div>
+
+        <h1 class="profile__name">Willian Dias</h1>
+        <p class="profile__role">Dados &middot; IA &middot; Automação</p>
+        <p class="profile__tagline">Transformo dados em decisões com Python, SQL e Inteligência Artificial.</p>
+
+        <div class="profile__socials">
+          <a class="social-btn" href="https://github.com/Subaruberu" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Willian Dias">
+            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+          </a>
+          <a class="social-btn" href="mailto:willian.fer.dias01@gmail.com" aria-label="Enviar e-mail para Willian Dias">
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+          </a>
+          <button class="social-btn" type="button" data-copy-email aria-label="Copiar e-mail" title="Copiar e-mail">
+            <svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>
+          </button>
+        </div>
+
+        <ul class="contact-list">
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+            <span>São Paulo, SP &mdash; Brasil</span>
+          </li>
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+            <a href="mailto:willian.fer.dias01@gmail.com">willian.fer.dias01@gmail.com</a>
+          </li>
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+            <a href="https://github.com/Subaruberu" target="_blank" rel="noopener noreferrer">github.com/Subaruberu</a>
+          </li>
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-pulse"/></svg>
+            <span class="text-accent">Aberto a oportunidades</span>
+          </li>
+        </ul>
+
+        <a class="btn btn--primary btn--block" href="#contato">
+          Vamos conversar
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </a>
+      </section>
+
+      <section class="card reveal" aria-labelledby="skills-title">
+        <h2 class="card__title" id="skills-title">
+          <svg class="icon" aria-hidden="true"><use href="#i-terminal"/></svg>
+          Stack principal
+        </h2>
+
+        <div class="skill" data-skill>
+          <div class="skill__head"><span>Python</span><span class="skill__value">85%</span></div>
+          <div class="skill__track"><span class="skill__bar" data-level="85"></span></div>
+        </div>
+        <div class="skill" data-skill>
+          <div class="skill__head"><span>SQL</span><span class="skill__value">80%</span></div>
+          <div class="skill__track"><span class="skill__bar" data-level="80"></span></div>
+        </div>
+        <div class="skill" data-skill>
+          <div class="skill__head"><span>Power BI</span><span class="skill__value">80%</span></div>
+          <div class="skill__track"><span class="skill__bar" data-level="80"></span></div>
+        </div>
+        <div class="skill" data-skill>
+          <div class="skill__head"><span>Machine Learning</span><span class="skill__value">70%</span></div>
+          <div class="skill__track"><span class="skill__bar" data-level="70"></span></div>
+        </div>
+        <div class="skill" data-skill>
+          <div class="skill__head"><span>Microsoft Azure</span><span class="skill__value">65%</span></div>
+          <div class="skill__track"><span class="skill__bar" data-level="65"></span></div>
+        </div>
+        <div class="skill" data-skill>
+          <div class="skill__head"><span>HTML &middot; CSS &middot; JS</span><span class="skill__value">60%</span></div>
+          <div class="skill__track"><span class="skill__bar" data-level="60"></span></div>
+        </div>
+      </section>
+
+      <section class="card reveal" aria-labelledby="lang-title">
+        <h2 class="card__title" id="lang-title">
+          <svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>
+          Idiomas
+        </h2>
+
+        <div class="lang">
+          <div class="lang__head"><span>Português</span><span class="lang__level">Nativo</span></div>
+          <div class="lang__track"><span style="--level: 100%"></span></div>
+        </div>
+        <div class="lang">
+          <div class="lang__head"><span>Inglês</span><span class="lang__level">Técnico</span></div>
+          <div class="lang__track"><span style="--level: 65%"></span></div>
+        </div>
+        <div class="lang">
+          <div class="lang__head"><span>Espanhol</span><span class="lang__level">Leitura</span></div>
+          <div class="lang__track"><span style="--level: 35%"></span></div>
+        </div>
+      </section>
+    </aside>
+
+    <!-- ================= CONTEÚDO ================= -->
+    <div class="content">
+
+      <!-- HERO -->
+      <section class="hero reveal" id="sobre">
+        <div class="hero__top">
+          <span class="badge">
+            <span class="badge__dot"></span>
+            Disponível para novos desafios
+          </span>
+          <span class="hero__location">
+            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+            São Paulo, SP
+          </span>
+        </div>
+
+        <p class="eyebrow">Olá, eu sou</p>
+        <h2 class="hero__title">Willian Dias<span class="accent-dot">.</span></h2>
+
+        <p class="hero__roles" aria-label="Áreas de atuação">
+          <span class="role-rotator" data-roles='["Analista de Dados","Entusiasta de IA","Automação com Python","BI & Analytics"]'>Analista de Dados</span>
+        </p>
+
+        <p class="hero__text">
+          Profissional focado em <strong>Ciência de Dados</strong> e <strong>Inteligência Artificial</strong>,
+          construindo soluções que conectam modelos de linguagem a problemas reais &mdash; de agentes que
+          conversam com bancos de dados a dashboards que contam histórias. Cada projeto do meu portfólio
+          nasceu de um desafio prático, e este site é um deles.
+        </p>
+
+        <div class="hero__stats">
+          <div class="stat">
+            <strong class="stat__number" data-count="20" data-suffix="+">20+</strong>
+            <span class="stat__label">repositórios públicos</span>
+          </div>
+          <div class="stat">
+            <strong class="stat__number" data-count="15" data-suffix="+">15+</strong>
+            <span class="stat__label">tecnologias no dia a dia</span>
+          </div>
+          <div class="stat">
+            <strong class="stat__number" data-count="10" data-suffix="+">10+</strong>
+            <span class="stat__label">labs e desafios DIO</span>
+          </div>
+        </div>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#projetos">
+            Ver projetos
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="https://github.com/Subaruberu" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+            GitHub
+          </a>
+          <button class="btn btn--ghost print-btn" type="button" data-print>
+            <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+            Currículo em PDF
+          </button>
+        </div>
+
+        <div class="hero__stack" aria-label="Tecnologias">
+          <span>Python</span><span>SQL</span><span>Power BI</span><span>Machine Learning</span>
+          <span>LLMs</span><span>Azure</span><span>Pandas</span><span>Git</span>
+        </div>
+      </section>
+
+      <!-- COMPETÊNCIAS -->
+      <section class="section reveal" id="competencias">
+        <header class="section__head">
+          <p class="section__kicker">01 &mdash; Competências</p>
+          <h2 class="section__title">O que eu coloco em prática</h2>
+          <p class="section__desc">Da coleta e tratamento dos dados até a entrega de uma solução que as pessoas realmente usam.</p>
+        </header>
+
+        <div class="expertise-grid">
+          <article class="expertise">
+            <span class="expertise__icon expertise__icon--teal">
+              <svg class="icon" aria-hidden="true"><use href="#i-database"/></svg>
+            </span>
+            <h3>Análise de Dados</h3>
+            <p>Limpeza, exploração e modelagem de dados com foco em gerar insight acionável.</p>
+            <ul class="tag-list">
+              <li>Python</li><li>Pandas</li><li>NumPy</li><li>SQL</li><li>Estatística</li>
+            </ul>
+          </article>
+
+          <article class="expertise">
+            <span class="expertise__icon expertise__icon--violet">
+              <svg class="icon" aria-hidden="true"><use href="#i-sparkles"/></svg>
+            </span>
+            <h3>IA &amp; LLMs</h3>
+            <p>Agentes e aplicações com modelos de linguagem, machine learning e visão computacional.</p>
+            <ul class="tag-list">
+              <li>Gemini</li><li>Google ADK</li><li>Scikit-learn</li><li>NLP</li><li>ML</li>
+            </ul>
+          </article>
+
+          <article class="expertise">
+            <span class="expertise__icon expertise__icon--blue">
+              <svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg>
+            </span>
+            <h3>BI &amp; Automação</h3>
+            <p>Dashboards, planilhas inteligentes e rotinas que eliminam trabalho manual.</p>
+            <ul class="tag-list">
+              <li>Power BI</li><li>Excel</li><li>DAX</li><li>Power Query</li><li>APIs</li>
+            </ul>
+          </article>
+
+          <article class="expertise">
+            <span class="expertise__icon expertise__icon--amber">
+              <svg class="icon" aria-hidden="true"><use href="#i-cloud"/></svg>
+            </span>
+            <h3>Cloud &amp; Dados</h3>
+            <p>Laboratórios e pipelines na Microsoft Azure, versionamento e deploy de projetos.</p>
+            <ul class="tag-list">
+              <li>Azure</li><li>Data Factory</li><li>Databricks</li><li>Git</li><li>GitHub Pages</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROJETOS -->
+      <section class="section reveal" id="projetos">
+        <header class="section__head section__head--row">
+          <div>
+            <p class="section__kicker">02 &mdash; Portfólio</p>
+            <h2 class="section__title">Projetos em destaque</h2>
+            <p class="section__desc">Soluções construídas durante formações, desafios e estudos independentes.</p>
+          </div>
+          <a class="link-arrow" href="https://github.com/Subaruberu?tab=repositories" target="_blank" rel="noopener noreferrer">
+            Todos os repositórios
+            <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
+          </a>
+        </header>
+
+        <div class="projects">
+          <!-- Projeto destaque -->
+          <article class="project project--featured">
+            <div class="project__body">
+              <div class="project__meta">
+                <span class="project__tag">Destaque</span>
+                <span class="project__lang"><span class="dot dot--python"></span> Python</span>
+              </div>
+              <h3 class="project__title">Agente SQL com IA</h3>
+              <p class="project__desc">
+                Agente de Inteligência Artificial que traduz perguntas em linguagem natural para consultas SQL,
+                aproximando pessoas não técnicas dos dados. Um dos projetos do desafio da DIO.
+              </p>
+              <ul class="tag-list">
+                <li>Python</li><li>LLM</li><li>SQL</li><li>IA generativa</li>
+              </ul>
+              <a class="project__link" href="https://github.com/Subaruberu/agente-sql-dio" target="_blank" rel="noopener noreferrer">
+                Ver no GitHub
+                <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
+              </a>
+            </div>
+
+            <div class="terminal" aria-hidden="true">
+              <div class="terminal__bar">
+                <span class="terminal__dot terminal__dot--red"></span>
+                <span class="terminal__dot terminal__dot--yellow"></span>
+                <span class="terminal__dot terminal__dot--green"></span>
+                <span class="terminal__title">agente_sql.py</span>
+              </div>
+              <pre class="terminal__body"><code><span class="c-comment"># pergunta em linguagem natural</span>
+<span class="c-prompt">$</span> python agente_sql.py
+<span class="c-quote">"Quais clientes mais compraram em 2026?"</span>
+
+<span class="c-comment"># consulta gerada pelo agente</span>
+<span class="c-key">SELECT</span> c.nome, <span class="c-fn">SUM</span>(p.valor) <span class="c-key">AS</span> total
+<span class="c-key">FROM</span> clientes c
+<span class="c-key">JOIN</span> pedidos p <span class="c-key">ON</span> p.cliente_id = c.id
+<span class="c-key">WHERE</span> p.ano = <span class="c-num">2026</span>
+<span class="c-key">GROUP BY</span> c.nome
+<span class="c-key">ORDER BY</span> total <span class="c-key">DESC</span>
+<span class="c-key">LIMIT</span> <span class="c-num">5</span>;<span class="c-cursor"></span></code></pre>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__top">
+              <span class="project__icon project__icon--violet">
+                <svg class="icon" aria-hidden="true"><use href="#i-cpu"/></svg>
+              </span>
+              <a class="project__ext" href="https://github.com/Subaruberu/app-no-trello-com-python" target="_blank" rel="noopener noreferrer" aria-label="Abrir projeto App no Trello com Python no GitHub">
+                <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
+              </a>
+            </div>
+            <h3 class="project__title">App no Trello com Python</h3>
+            <p class="project__desc">
+              Agente de IA com Google ADK + Gemini que organiza o dia em um quadro real do Trello:
+              cria, lista, move e remove cards por conversa.
+            </p>
+            <ul class="tag-list">
+              <li>Python</li><li>Google ADK</li><li>Gemini</li><li>Trello API</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div class="project__top">
+              <span class="project__icon project__icon--teal">
+                <svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg>
+              </span>
+              <a class="project__ext" href="https://github.com/Subaruberu/Dashboard-da-Porsche-com-Agentes-de-IA" target="_blank" rel="noopener noreferrer" aria-label="Abrir projeto Dashboard da Porsche no GitHub">
+                <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
+              </a>
+            </div>
+            <h3 class="project__title">Dashboard da Porsche com Agentes de IA</h3>
+            <p class="project__desc">
+              Dashboard interativo que combina visualização de dados e agentes de IA para explorar
+              indicadores e responder perguntas sobre os números.
+            </p>
+            <ul class="tag-list">
+              <li>HTML</li><li>Data Viz</li><li>IA</li><li>Dashboard</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div class="project__top">
+              <span class="project__icon project__icon--blue">
+                <svg class="icon" aria-hidden="true"><use href="#i-sparkles"/></svg>
+              </span>
+              <a class="project__ext" href="https://github.com/Subaruberu/reducao-de-dimensionalidade-em-imagens-para-redes-neurais" target="_blank" rel="noopener noreferrer" aria-label="Abrir projeto de redução de dimensionalidade no GitHub">
+                <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
+              </a>
+            </div>
+            <h3 class="project__title">Visão Computacional &amp; Dimensionalidade</h3>
+            <p class="project__desc">
+              Pipeline que converte imagens RGB em escala de cinza (BT.601) e as binariza por limiar,
+              com histogramas comparativos &mdash; preparação para redes neurais.
+            </p>
+            <ul class="tag-list">
+              <li>Python</li><li>NumPy</li><li>Pillow</li><li>Jupyter</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div class="project__top">
+              <span class="project__icon project__icon--amber">
+                <svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>
+              </span>
+              <a class="project__ext" href="https://github.com/Subaruberu/Analise-de-modelos-de-Traducao" target="_blank" rel="noopener noreferrer" aria-label="Abrir projeto de análise de modelos de tradução no GitHub">
+                <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
+              </a>
+            </div>
+            <h3 class="project__title">Análise de Modelos de Tradução</h3>
+            <p class="project__desc">
+              Comparação de modelos de tradução automática com notebooks Jupyter, métricas e
+              análise crítica dos resultados.
+            </p>
+            <ul class="tag-list">
+              <li>Jupyter</li><li>NLP</li><li>Análise</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div class="project__top">
+              <span class="project__icon project__icon--rose">
+                <svg class="icon" aria-hidden="true"><use href="#i-pulse"/></svg>
+              </span>
+              <a class="project__ext" href="https://github.com/Subaruberu/Agente-Watch" target="_blank" rel="noopener noreferrer" aria-label="Abrir projeto Agente Watch no GitHub">
+                <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
+              </a>
+            </div>
+            <h3 class="project__title">Agente Watch</h3>
+            <p class="project__desc">
+              Experimentos com agentes autônomos em Python, explorando monitoramento,
+              tomada de decisão e execução de tarefas.
+            </p>
+            <ul class="tag-list">
+              <li>Python</li><li>Agentes</li><li>Automação</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="other-labs">
+          <h3 class="other-labs__title">
+            <svg class="icon" aria-hidden="true"><use href="#i-folder"/></svg>
+            Outros laboratórios
+          </h3>
+          <ul class="lab-list">
+            <li>
+              <a href="https://github.com/Subaruberu/lab-azure-vms" target="_blank" rel="noopener noreferrer">
+                <span>Máquinas Virtuais no Azure</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Subaruberu/data-factory-azure" target="_blank" rel="noopener noreferrer">
+                <span>Azure Data Factory</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Subaruberu/Azure-databrickes-dio" target="_blank" rel="noopener noreferrer">
+                <span>Azure Databricks</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Subaruberu/Construindo-um-Esquema-Conceitual-para-Banco-De-dados" target="_blank" rel="noopener noreferrer">
+                <span>Modelagem de Banco de Dados</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Subaruberu/Excel-1-IA-com-claude" target="_blank" rel="noopener noreferrer">
+                <span>Excel + IA</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Subaruberu/dio_bank" target="_blank" rel="noopener noreferrer">
+                <span>DIO Bank</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- FORMAÇÃO -->
+      <section class="section reveal" id="formacao">
+        <header class="section__head">
+          <p class="section__kicker">03 &mdash; Formação</p>
+          <h2 class="section__title">Aprendizado contínuo</h2>
+          <p class="section__desc">Formação prática, orientada a projetos e desafios reais.</p>
+        </header>
+
+        <div class="timeline">
+          <article class="timeline__item">
+            <span class="timeline__marker">
+              <svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg>
+            </span>
+            <div class="timeline__content">
+              <div class="timeline__head">
+                <div>
+                  <h3>Digital Innovation One &mdash; DIO</h3>
+                  <p class="timeline__role">Formação em Ciência de Dados &amp; Inteligência Artificial</p>
+                </div>
+                <span class="timeline__period">2024 &mdash; Atual</span>
+              </div>
+              <p>
+                Trilhas e bootcamps com foco em Python, SQL, Power BI, Machine Learning, computação em nuvem
+                e IA generativa. Cada formação termina em um projeto prático publicado no GitHub &mdash;
+                vários deles estão no portfólio acima.
+              </p>
+              <ul class="tag-list">
+                <li>Python</li><li>SQL</li><li>Power BI</li><li>Machine Learning</li><li>Azure</li><li>IA generativa</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline__item">
+            <span class="timeline__marker">
+              <svg class="icon" aria-hidden="true"><use href="#i-cloud"/></svg>
+            </span>
+            <div class="timeline__content">
+              <div class="timeline__head">
+                <div>
+                  <h3>Microsoft Azure &mdash; Labs práticos</h3>
+                  <p class="timeline__role">Cloud, dados e infraestrutura</p>
+                </div>
+                <span class="timeline__period">2025 &mdash; Atual</span>
+              </div>
+              <p>
+                Laboratórios de máquinas virtuais, redundância de arquivos, Data Factory e Databricks,
+                documentados com o resumo das lições aprendidas em cada experiência.
+              </p>
+              <ul class="tag-list">
+                <li>VMs</li><li>Storage</li><li>Data Factory</li><li>Databricks</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline__item">
+            <span class="timeline__marker">
+              <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg>
+            </span>
+            <div class="timeline__content">
+              <div class="timeline__head">
+                <div>
+                  <h3>Desenvolvimento Web &mdash; Projeto autoral</h3>
+                  <p class="timeline__role">HTML, CSS e JavaScript na prática</p>
+                </div>
+                <span class="timeline__period">2026</span>
+              </div>
+              <p>
+                Construção deste portfólio do zero: layout responsivo, componentes acessíveis,
+                tema claro/escuro, animações com IntersectionObserver e versão otimizada para impressão.
+              </p>
+              <ul class="tag-list">
+                <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Acessibilidade</li><li>GitHub Pages</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="focus-grid">
+          <article class="focus">
+            <svg class="icon" aria-hidden="true"><use href="#i-award"/></svg>
+            <h3>Projetos &gt; certificados</h3>
+            <p>Aprendo construindo. Todo curso vira um repositório público com código, documentação e resultado.</p>
+          </article>
+          <article class="focus">
+            <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg>
+            <h3>Código aberto</h3>
+            <p>Versionamento com Git, READMEs cuidadosos e deploy estático via GitHub Pages.</p>
+          </article>
+          <article class="focus">
+            <svg class="icon" aria-hidden="true"><use href="#i-sparkles"/></svg>
+            <h3>Sempre aprendendo</h3>
+            <p>Estudo contínuo de LLMs, agentes, engenharia de dados e boas práticas de analytics.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section class="section contact reveal" id="contato">
+        <div class="contact__glow" aria-hidden="true"></div>
+        <p class="section__kicker">04 &mdash; Contato</p>
+        <h2 class="contact__title">Vamos construir algo<br>com dados?</h2>
+        <p class="contact__text">
+          Estou aberto a oportunidades em análise de dados, BI, IA e engenharia de dados.
+          Se você tem um problema interessante &mdash; ou uma vaga &mdash; minha caixa de entrada está aberta.
+        </p>
+
+        <div class="contact__actions">
+          <a class="btn btn--primary btn--lg" href="mailto:willian.fer.dias01@gmail.com">
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+            Enviar e-mail
+          </a>
+          <button class="btn btn--ghost btn--lg" type="button" data-copy-email>
+            <svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>
+            Copiar e-mail
+          </button>
+          <a class="btn btn--ghost btn--lg" href="https://github.com/Subaruberu" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+            GitHub
+          </a>
+        </div>
+
+        <a class="contact__mail" href="mailto:willian.fer.dias01@gmail.com">willian.fer.dias01@gmail.com</a>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__brand"><span>WD</span> Willian Dias</p>
+      <p class="footer__note">Feito com HTML, CSS &amp; JavaScript &mdash; sem frameworks.</p>
+      <p class="footer__copy">&copy; <span id="year">2026</span> Willian Dias. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="to-top" type="button" aria-label="Voltar ao topo" title="Voltar ao topo">
+    <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg>
+  </button>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
