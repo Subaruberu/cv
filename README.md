@@ -8,9 +8,11 @@
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-181717?style=flat-square&logo=github&logoColor=white)](https://pages.github.com/)
 [![DIO](https://img.shields.io/badge/Desafio-DIO-2dd4bf?style=flat-square)](https://www.dio.me/)
 
-**Repositório:** privado (por enquanto). Quando você torná-lo público e ativar o GitHub Pages, o site ficará em `https://subaruberu.github.io/cv/`.
+**Site publicado:** https://subaruberu.github.io/cv/ (PT) · https://subaruberu.github.io/cv/en/ (EN)
 
-> **Nota:** este projeto está em um repositório privado. O GitHub Pages só publica sites de repositórios públicos no plano gratuito. As instruções de publicação estão mais abaixo.
+**Repositório:** https://github.com/Subaruberu/cv
+
+> O projeto está em um repositório público com GitHub Pages ativo. As instruções de publicação continuam abaixo para quem quiser replicar o processo.
 
 ![Preview do portfólio](assets/img/preview.png)
 
