@@ -331,7 +331,7 @@
             <h3>IA &amp; LLMs</h3>
             <p>Agentes e aplicações com modelos de linguagem, machine learning e visão computacional.</p>
             <ul class="tag-list">
-              <li>Gemini</li><li>Google ADK</li><li>Scikit-learn</li><li>NLP</li><li>ML</li>
+              <li>Gemini</li><li>Google ADK</li><li>Scikit-learn</li><li>RAG</li><li>NLP</li><li>ML</li>
             </ul>
           </article>
 
@@ -381,15 +381,16 @@
                 <span class="project__tag">Destaque</span>
                 <span class="project__lang"><span class="dot dot--python"></span> Python</span>
               </div>
-              <h3 class="project__title">Agente SQL com IA</h3>
+              <h3 class="project__title">Chat com PDFs usando RAG</h3>
               <p class="project__desc">
-                Agente de Inteligência Artificial que traduz perguntas em linguagem natural para consultas SQL,
-                aproximando pessoas não técnicas dos dados. Um dos projetos do desafio da DIO.
+                Chatbot que responde perguntas com base nos seus PDFs, citando arquivo e página.
+                Busca híbrida (embeddings + BM25), citações rastreáveis e modo 100% offline &mdash;
+                projeto do desafio da DIO.
               </p>
               <ul class="tag-list">
-                <li>Python</li><li>LLM</li><li>SQL</li><li>IA generativa</li>
+                <li>Python</li><li>RAG</li><li>LLM</li><li>Streamlit</li>
               </ul>
-              <a class="project__link" href="https://github.com/Subaruberu/agente-sql-dio" target="_blank" rel="noopener noreferrer">
+              <a class="project__link" href="https://github.com/Subaruberu/dio-pdf-chat" target="_blank" rel="noopener noreferrer">
                 Ver no GitHub
                 <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
               </a>
@@ -400,21 +401,35 @@
                 <span class="terminal__dot terminal__dot--red"></span>
                 <span class="terminal__dot terminal__dot--yellow"></span>
                 <span class="terminal__dot terminal__dot--green"></span>
-                <span class="terminal__title">agente_sql.py</span>
+                <span class="terminal__title">pdf_chat.py</span>
               </div>
-              <pre class="terminal__body"><code><span class="c-comment"># pergunta em linguagem natural</span>
-<span class="c-prompt">$</span> python agente_sql.py
-<span class="c-quote">"Quais clientes mais compraram em 2026?"</span>
+              <pre class="terminal__body"><code><span class="c-comment"># pergunta sobre os seus PDFs</span>
+<span class="c-prompt">$</span> python chat.py
+<span class="c-quote">"Qual foi a redução no tempo de triagem?"</span>
 
-<span class="c-comment"># consulta gerada pelo agente</span>
-<span class="c-key">SELECT</span> c.nome, <span class="c-fn">SUM</span>(p.valor) <span class="c-key">AS</span> total
-<span class="c-key">FROM</span> clientes c
-<span class="c-key">JOIN</span> pedidos p <span class="c-key">ON</span> p.cliente_id = c.id
-<span class="c-key">WHERE</span> p.ano = <span class="c-num">2026</span>
-<span class="c-key">GROUP BY</span> c.nome
-<span class="c-key">ORDER BY</span> total <span class="c-key">DESC</span>
-<span class="c-key">LIMIT</span> <span class="c-num">5</span>;<span class="c-cursor"></span></code></pre>
+<span class="c-comment"># resposta com fonte e página</span>
+63% <span class="c-comment">(de 74 para 27 min por artigo)</span> [1]
+[1] artigo_rag.pdf &middot; p. 2 &middot; score <span class="c-num">0.87</span><span class="c-cursor"></span></code></pre>
             </div>
+          </article>
+
+          <article class="project">
+            <div class="project__top">
+              <span class="project__icon project__icon--teal">
+                <svg class="icon" aria-hidden="true"><use href="#i-database"/></svg>
+              </span>
+              <a class="project__ext" href="https://github.com/Subaruberu/agente-sql-dio" target="_blank" rel="noopener noreferrer" aria-label="Abrir projeto Agente SQL com IA no GitHub">
+                <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
+              </a>
+            </div>
+            <h3 class="project__title">Agente SQL com IA</h3>
+            <p class="project__desc">
+              Agente de Inteligência Artificial que traduz perguntas em linguagem natural para consultas SQL,
+              aproximando pessoas não técnicas dos dados.
+            </p>
+            <ul class="tag-list">
+              <li>Python</li><li>LLM</li><li>SQL</li><li>IA generativa</li>
+            </ul>
           </article>
 
           <article class="project">
